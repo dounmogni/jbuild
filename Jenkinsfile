@@ -18,7 +18,7 @@ node {
           }					
 		}
      stage ('Push') {
-         docker.withRegistry('https://registry.gitlab.com', 'reg1') {
+         docker.withRegistry('https://registry.gitlab.com', 'reg1') {  //reg etant le credential sur github
              img.push 'latest'
              img.push()
              
